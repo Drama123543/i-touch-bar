@@ -1,0 +1,26 @@
+{
+  "name": "i-touch-bar",
+  "version": "1.0.0",
+  "description": "Address book alphabet touch index",
+  "main": "touchBar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishanyang/i-touch-bar.git"
+  },
+  "keywords": [
+    "touch",
+    "bar"
+  ],
+  "author": "ishanyang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ishanyang/i-touch-bar/issues"
+  },
+  "homepage": "https://github.com/ishanyang/i-touch-bar#readme",
+  "dependencies": {
+    "randomstring": "^1.1.5"
+  }
+}

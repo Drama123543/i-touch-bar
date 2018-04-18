@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+#alpWrap {
+  position: fixed;
+  width: 25px;
+  top: 64px;
+  bottom: 0px;
+  right: 0;
+  z-index: 9999;
+  font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+  color: chocolate;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  -ms-flex-pack:start;
+  justify-content:flex-start;
+  list-style: none;
+  padding-bottom: 30px;
+}
+
+#alpWrap:hover,
+#alpWrap.active {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#alpWrap:hover li,
+#alpWrap.active li {
+  color: #fff;
+}
+
+#alpWrap li {
+  -ms-flex:1 1 auto;
+  flex:1 1 auto;
+  list-style: none;
+  text-align: center;
+  color: #333;
+  font-size: 11px;
+}

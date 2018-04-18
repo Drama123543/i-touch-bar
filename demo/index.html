@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+<title>字母索引触摸反馈</title>
+<link rel="stylesheet" href="default.css">
+<link rel="stylesheet" type="text/css" href="../touchBar.css">
+</head>
+
+<body>
+  <div id="header"><a href="">touchBar</a></div>
+  <!--alpWrap-->
+  <ul id="alpWrap">
+    <!-- <li data-target="#Z">Z</li> -->
+  </ul>
+  <!--container-->
+  <div id="container"></div>
+
+  <div id="tip"></div>
+  <!-- <div id="footer"></div> -->
+
+<script src="lib/jquery3.1.1-min.js"></script>
+<script src="lib/underscore-min.js"></script>
+<script src="../touchBar.js"></script>
+
+<script>
+$(function(){
+    var alpIndexArr = ["↑","☆","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","#"];
+    var contentArr = [{"text":"AHoGrGvPSCmG","src":"images/3.png"},{"text":"AUJHWZuRPVpc","src":"images/0.png"},{"text":"aKxUANdJLUoI","src":"images/2.png"},{"text":"autUbrzePxnP","src":"images/3.png"},{"text":"AzGxDGBZBhrK","src":"images/2.png"},{"text":"afTopoigDqeI","src":"images/0.png"},{"text":"AglxAKLRfUoO","src":"images/3.png"},{"text":"ansswqznzEDI","src":"images/2.png"},{"text":"AhlJDgNJEpWS","src":"images/1.png"},{"text":"BpTzwdsrIfkb","src":"images/2.png"},{"text":"BuVJVbMnqBPl","src":"images/0.png"},{"text":"BXnbaxcQbjnT","src":"images/2.png"},{"text":"brHvkhWAkGJY","src":"images/2.png"},{"text":"BYcJCfKGfLym","src":"images/3.png"},{"text":"dcNVtwKcCSvs","src":"images/0.png"},{"text":"DsyeQhqZflSm","src":"images/2.png"},{"text":"DsAjEEutHFTP","src":"images/2.png"},{"text":"dwQSfiUGdqTj","src":"images/3.png"},{"text":"ezcFehniyreZ","src":"images/1.png"},{"text":"eYwDqVvRBale","src":"images/2.png"},{"text":"EbhSjZeEBWaP","src":"images/2.png"},{"text":"eUFdFSVPiTSL","src":"images/3.png"},{"text":"FGNtpWdTQjnu","src":"images/2.png"},{"text":"FPfjHQymXbGW","src":"images/3.png"},{"text":"FMsxnQmkRMdu","src":"images/1.png"},{"text":"FhFftvEyjcgD","src":"images/1.png"},{"text":"gLBflOnJroMe","src":"images/3.png"},{"text":"GvBvnQAWJmBO","src":"images/1.png"},{"text":"GPVnJxGpLEIG","src":"images/1.png"},{"text":"gAmoRbNoPreg","src":"images/3.png"},{"text":"hDojKhYSvQcZ","src":"images/3.png"},{"text":"HIUuCHOureUy","src":"images/2.png"},{"text":"HTQyhyPojyDi","src":"images/0.png"},{"text":"HcBvojPOQOph","src":"images/0.png"},{"text":"jRFEWpmnkQWZ","src":"images/3.png"},{"text":"JuPBJxihokXn","src":"images/3.png"},{"text":"jalEqwVjwaYT","src":"images/0.png"},{"text":"JqxnIYqcjuGY","src":"images/3.png"},{"text":"jpcDXrWhGVSF","src":"images/2.png"},{"text":"KcubzUuSSHwO","src":"images/3.png"},{"text":"KjMlUujUbuRg","src":"images/2.png"},{"text":"kAWrcfNHJgFN","src":"images/3.png"},{"text":"KppeQKKUrHPC","src":"images/3.png"},{"text":"KBqxYAAvgTjL","src":"images/1.png"},{"text":"lrrLgAnuoYSs","src":"images/1.png"},{"text":"LegFuKeOtnGg","src":"images/1.png"},{"text":"MDtdWDZEOfyD","src":"images/0.png"},{"text":"mzcpZyimJhuq","src":"images/0.png"},{"text":"MwFJJqXDWyWu","src":"images/2.png"},{"text":"NjMpnCbuRLQJ","src":"images/2.png"},{"text":"NqCysJpqevmn","src":"images/2.png"},{"text":"olXAtoJviuqg","src":"images/1.png"},{"text":"omhCtMtwsPzz","src":"images/0.png"},{"text":"PTHvavAWeNJs","src":"images/0.png"},{"text":"pnyPSDMingfm","src":"images/1.png"},{"text":"PxnXixzbThiS","src":"images/2.png"},{"text":"PriPWPtKTwFM","src":"images/2.png"},{"text":"PEsScUXEJVQU","src":"images/0.png"},{"text":"pXATOcRcdDKM","src":"images/2.png"},{"text":"pZsOLCemqpVA","src":"images/1.png"},{"text":"preofOXXgOEL","src":"images/2.png"},{"text":"qxjKonfZWASj","src":"images/3.png"},{"text":"QHkGzZsmmFUy","src":"images/2.png"},{"text":"qfgGuhKHEeqi","src":"images/1.png"},{"text":"qdIRCeCLFAbK","src":"images/0.png"},{"text":"QrmLOcOYeBEm","src":"images/2.png"},{"text":"rSopPxmiPOsV","src":"images/3.png"},{"text":"rQeDRLOkZimz","src":"images/3.png"},{"text":"rqrtOMjFBUns","src":"images/3.png"},{"text":"RWQDGgesfaNN","src":"images/0.png"},{"text":"syDvIOwFLGdo","src":"images/2.png"},{"text":"tPdlzWDNLjsr","src":"images/3.png"},{"text":"TZfgnabUmgtq","src":"images/1.png"},{"text":"tdpfZEFxHdCy","src":"images/3.png"},{"text":"tRSFucGUQklB","src":"images/0.png"},{"text":"tOoPwJpTQaLu","src":"images/0.png"},{"text":"URssRSZQYVll","src":"images/3.png"},{"text":"ULPGovGbIVnH","src":"images/1.png"},{"text":"Uyoyvwkozomx","src":"images/3.png"},{"text":"umidRondNBlo","src":"images/2.png"},{"text":"vVDDIrkxOpAH","src":"images/0.png"},{"text":"wcqRwmuVsRWf","src":"images/3.png"},{"text":"wJftzzevuNwJ","src":"images/1.png"},{"text":"wGktVYMDVPuV","src":"images/0.png"},{"text":"wluydOzBZWua","src":"images/2.png"},{"text":"wTZSaQFUXygt","src":"images/0.png"},{"text":"WGDLsVEtwCDo","src":"images/2.png"},{"text":"WIjXKRXnTYcl","src":"images/0.png"},{"text":"xHovYmxWUCYl","src":"images/0.png"},{"text":"xsaeqAnUcDXq","src":"images/1.png"},{"text":"xkGHCTKtWMMI","src":"images/0.png"},{"text":"xOtHAFSEPYXX","src":"images/3.png"},{"text":"XuMNeKCYIepx","src":"images/0.png"},{"text":"YDxjhbkaafej","src":"images/2.png"},{"text":"YCNCXRGOyblv","src":"images/0.png"},{"text":"yZUPwWOcZPHG","src":"images/3.png"},{"text":"ZtToPLhLhoaS","src":"images/3.png"},{"text":"zAzwaPRyXZpR","src":"images/2.png"},{"text":"zxXXXriXAoWC","src":"images/2.png"},{"text":"zUSYUBsnrNdH","src":"images/0.png"}];
+    var tplAlp = _.template("<li data-target=\"#<%= key%>\"><%= key%></li>")
+    var tplTitle = _.template("<div class=\"title\" id=\"<%= index%>\"><%= index%></div>")
+    var tplItem = _.template("<div class=\"js-bitem\" data-id=\"<%= text%>\"><img src=\"<%= src%>\" /> <%= text%></div>")
+
+    function renderAlpWrap(data){
+      var allHtml = _.reduce(data,function(html,value){
+            return html+tplAlp({key:value});
+       },"")
+      console.log(allHtml);
+      $("#alpWrap").html(allHtml)
+    }
+    renderAlpWrap(alpIndexArr)
+    function renderContent(contentArr){
+      var title;
+      var allHtml = _.reduce(contentArr,function(html,item){
+        var titleTemp = item.text.substr(0,1).toUpperCase();
+            if(title===titleTemp){
+              html += tplItem(item)
+            }else{
+              if(title){
+                title = titleTemp;
+                html += "</div><div>"+tplTitle({index:title})+tplItem(item)
+              }else{
+                title = titleTemp;
+                html += "<div>"+tplTitle({index:title});
+              }
+            }
+            return html;
+       },"")+"</div>";
+      $("#container").html($("#container").html()+allHtml)
+    }
+    $("#container").on("click",".js-bitem",function(){
+      alert($(this).attr("data-id"));
+    })
+    
+
+    renderContent(contentArr)
+    //调用方法
+    //1.定义回调函数
+    var alpIndexTouchCallback = (function(){
+        var paddingTop = parseInt($("#container").css("paddingTop"))||0;
+        var $tip = $("#tip")
+        var $container = $(window)
+        //提示当前字母
+        var tipShow = function(v){
+
+             $tip.html(v).fadeIn("fast");
+        }
+        //隐藏提示
+        var tipHide = function(){
+             $tip.fadeOut("fast");
+        }
+        var other = function(target){
+            var $obj = $(target);
+            console.log($obj[0].offsetTop);
+            $container.scrollTop($obj[0].offsetTop-paddingTop)
+        }
+        var setTimeoutControl;
+        return function(target,text){
+            tipShow(text);
+            clearTimeout(setTimeoutControl);
+            setTimeoutControl = setTimeout(tipHide,400);
+            other(target);
+        }
+    })();
+    //2. 实例化
+    var alp = touchBar(alpIndexTouchCallback,"#alpWrap");
+    //关闭 
+    //alp.touchSwitch(false);
+    //开启
+    //alp.touchSwitch(true);
+    //循环开关
+    //alp.touchSwitch();
+
+})
+</script>
+
+</body>
+</html>
