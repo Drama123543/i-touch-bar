@@ -42,7 +42,6 @@ var throttle = function(fn, interval) {
 };
 
 // use modernizr Touch Events detect
-// to handle Mobile shortpressHandler trigger twice bug
 function detectTouch() {
   var bool;
   if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
