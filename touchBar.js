@@ -1,7 +1,7 @@
 /**
  * The MIT License (MIT)
  *
- * Copyright (c) 2016 sq126
+ * Copyright (c) 2018 ishanyang
  * All rights reserved.
  * https://github.com/ishanyang/i-touch-bar
  */
